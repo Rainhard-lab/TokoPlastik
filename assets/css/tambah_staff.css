@@ -1,0 +1,87 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1d;
+  color: #fff;
+}
+
+
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #2c2c34;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sidebar h2 {
+    font-family: Arial, sans-serif; /* atau font lain yang kamu pakai */
+  font-weight: bold;
+  color: #ff80ab;
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  text-decoration: none;
+  color: #bbb;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #ff80ab;
+  color: #fff;
+}
+
+/* Main content */
+.main {
+  margin-left: 220px;
+  padding: 20px;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.card-custom {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar h2 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .sidebar a {
+    flex: 1;
+    text-align: center;
+    margin: 5px;
+  }
+
+  .main {
+    margin-left: 0;
+    margin-top: auto;
+  }
+
+}
