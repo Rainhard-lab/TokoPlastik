@@ -1,0 +1,206 @@
+/* kasir.css - dark theme sesuai dashboard */
+html,body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1d;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #2c2c34;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+}
+
+.sidebar h2 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #ff80ab;
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  color: #bbb;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover, .sidebar a.active {
+  background: #ff80ab;
+  color: #000;
+}
+
+/* Main */
+.main {
+  margin-left: 240px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Judul */
+h2 {
+  color: #ff80ab;
+}
+
+/* Table styling */
+.table, .table-kasir {
+  background: #2c2c34;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #fff;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table-kasir th {
+  background: #ff80ab;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+}
+
+.table td, .table-kasir td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  border: 1px solid #444;
+}
+
+/* Card produk */
+.produk-item {
+  background: #2c2c34;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Input */
+.form-control {
+  border-radius: 6px;
+  background: #1a1a1d;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #ff80ab;
+  box-shadow: 0 0 6px rgba(255,128,171,0.6);
+}
+
+.harga {
+  background: #333 !important;
+  color: #ff80ab !important;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* Tombol */
+.btn-success {
+  background: #28a745;
+  border: none;
+  color: #fff;
+  transition: 0.3s;
+}
+.btn-success:hover {
+  background: #218838;
+}
+
+.btn-info {
+  background: #ff80ab;
+  border: none;
+  color: #000;
+  transition: 0.3s;
+}
+.btn-info:hover {
+  background: #ff4d94;
+  color: #fff;
+}
+
+.btn-danger {
+  background: #dc3545;
+  border: none;
+  color: #fff;
+  transition: 0.3s;
+}
+.btn-danger:hover {
+  background: #b52a37;
+}
+
+/* Container tombol bawah tabel */
+.mb-3 {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Kotak total transaksi sticky */
+.total-transaksi {
+  position: fixed;
+  bottom: 0;
+  left: 240px; /* menyesuaikan sidebar */
+  right: 0;
+  background-color: #2c2c34;
+  border-top: 3px solid #ff80ab;
+  padding: 15px 30px;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+.total-transaksi h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ff80ab;
+}
+
+.total-transaksi span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .main {
+    margin-left: 0;
+    padding: 12px;
+  }
+  .produk-item .row {
+    flex-direction: column;
+  }
+  .produk-item .col-md-5,
+  .produk-item .col-md-2,
+  .produk-item .col-md-3 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .total-transaksi {
+    left: 0;
+  }
+}

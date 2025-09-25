@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laporan Transaksi</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/reports.css">
+</head>
+<body>
+<div class="sidebar">
+  <h2>TokoPlastik</h2>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="staff.html">Staff</a>
+  <a href="inventory.html">Inventory</a>
+  <a href="reports.html" class="active">Reports</a>
+  <a href="kasir.html">Kasir</a>
+  <a href="logout.html">Logout</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+  <h2 style="color:#ff80ab;">📊 Laporan Transaksi</h2>
+  <div class="card mt-4">
+    <table class="table" style="width:100%; border-collapse: collapse;">
+      <thead>
+        <tr style="background:#ff80ab; color:white;">
+          <th style="padding:10px; text-align:left;">ID Transaksi</th>
+          <th style="padding:10px; text-align:left;">Tanggal</th>
+          <th style="padding:10px; text-align:left;">Kasir</th>
+          <th style="padding:10px; text-align:right;">Total</th>
+          <th style="padding:10px; text-align:center;">Detail</th>
+        </tr>
+      </thead>
+      <tbody id="tabelTransaksi"></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+fetch("data/transaksi.json")
+  .then(res => res.json())
+  .then(data => {
+    let tbody = document.getElementById("tabelTransaksi");
+    tbody.innerHTML = "";
+
+    data.forEach(row => {
+      let tr = document.createElement("tr");
+      tr.style.borderBottom = "1px solid #444";
+      tr.innerHTML = `
+        <td style="padding:8px;">${row.id_transaksi}</td>
+        <td style="padding:8px;">${row.tanggal}</td>
+        <td style="padding:8px;">${row.nama_lengkap}</td>
+        <td style="padding:8px; text-align:right;">Rp ${Number(row.total).toLocaleString("id-ID")}</td>
+        <td style="padding:8px; text-align:center;">
+          <a href="report_detail.html?id=${row.id_transaksi}" style="background:#ff80ab; color:white; padding:6px 12px; border-radius:6px; text-decoration:none;">Lihat</a>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+  });
+</script>
+</body>
+</html>

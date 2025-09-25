@@ -1,0 +1,23 @@
+[
+  {
+    "id_transaksi": 1,
+    "kode_transaksi": "TRX20250916002",
+    "tanggal": "2025-09-17 06:22:03",
+    "id_user": 1,
+    "total": 65000,
+    "bayar": 70000,
+    "kembalian": 5000,
+    "metode_pembayaran": "cash"
+  },
+  {
+    "id_transaksi": 3,
+    "kode_transaksi": "TRX10155209664967475",
+    "tanggal": "2025-09-17 06:23:30",
+    "id_user": 1,
+    "total": 65000,
+    "bayar": 70000,
+    "kembalian": 5000,
+    "metode_pembayaran": "cash"
+  }
+
+]

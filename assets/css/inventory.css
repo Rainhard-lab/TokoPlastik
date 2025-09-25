@@ -1,0 +1,110 @@
+/* ============ INVENTORY STYLE ============ */
+body {
+margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1d;
+  color: #fff;
+}
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #2c2c34;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sidebar h2 {
+  color: #ff80ab;
+  font-family: Arial, sans-serif; /* atau font lain yang kamu pakai */
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  text-decoration: none;
+  color: #bbb;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #ff80ab;
+  color: #fff;
+}
+
+.main {
+  margin-left: 240px;
+  padding: 20px;
+}
+
+.card-custom {
+  background: #2c2c34;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.low-stock {
+  background-color: #ffe5e5 !important;
+  color: #000;
+}
+
+/* ====================== */
+/* RESPONSIVE MODE        */
+/* ====================== */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar h2 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .sidebar a {
+    flex: 1;
+    text-align: center;
+    margin: 5px;
+  }
+
+  .main {
+    margin-left: 0;
+    margin-top: auto;
+  }
+
+  .card-custom {
+    margin-top: 10px;
+  }
+
+  .table {
+    font-size: 14px;
+  }
+
+  /* 🔹 Header Inventory dan tombol kembali */
+  #Inventory {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #Inventory h2 {
+    margin-bottom: 10px;
+  }
+
+  #Inventory a {
+    align-self: center;
+  }
+}

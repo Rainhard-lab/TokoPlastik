@@ -1,0 +1,23 @@
+[
+  {
+    "id_user": 1,
+    "username": "admin",
+    "password": "1234",
+    "role": "admin",
+    "status": "aktif"
+  },
+  {
+    "id_user": 2,
+    "username": "kasir",
+    "password": "1234",
+    "role": "kasir",
+    "status": "aktif"
+  },
+  {
+    "id_user": 3,
+    "username": "staff",
+    "password": "1234",
+    "role": "staff",
+    "status": "aktif"
+  }
+]

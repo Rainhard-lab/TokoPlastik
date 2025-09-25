@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Statis JSON</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-box" onsubmit="return login(event)">
+            <h2>Masuk!</h2>
+            <p>Silahkan Masukkan Nama Pengguna dan Password!</p>
+
+            <label>Nama Pengguna</label>
+            <input type="text" name="username" placeholder="Masukkan Nama Pengguna" required>
+
+            <label>Kata Sandi</label>
+            <div class="password-field">
+                <input type="password" name="password" placeholder="Masukkan Kata Sandi" required>
+                <span class="toggle-password">👁️</span>
+            </div>
+
+            <div class="options">
+                <label><input type="checkbox"> Ingat Saya!</label>
+                <a href="#">Lupa Kata Sandi!</a>
+            </div>
+
+            <button type="submit" class="btn-login">Login</button>
+        </form>
+    </div>
+
+    <script>
+        // Toggle show/hide password
+        document.querySelector(".toggle-password").addEventListener("click", function(){
+            const pwd = document.querySelector("input[name='password']");
+            pwd.type = pwd.type === "password" ? "text" : "password";
+        });
+
+        async function login(e) {
+            e.preventDefault();
+
+            const userInput = document.querySelector("input[name='username']").value;
+            const passInput = document.querySelector("input[name='password']").value;
+
+            try {
+                const response = await fetch("data/user.json");
+                const users = await response.json();
+
+                // Cari user yang cocok
+                const user = users.find(u => 
+                    u.username === userInput && 
+                    u.password === passInput &&
+                    u.status === "aktif"
+                );
+
+                if (user) {
+                    alert(`Login berhasil sebagai ${user.role}!`);
+                    // Simulasi redirect
+                    window.location = "dashboard.html"; 
+                } else {
+                    alert("Username atau Password salah / akun nonaktif!");
+                }
+            } catch (error) {
+                console.error("Gagal load data/user.json", error);
+                alert("Terjadi kesalahan saat login.");
+            }
+        }
+    </script>
+</body>
+</html>

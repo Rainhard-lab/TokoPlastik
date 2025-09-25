@@ -1,0 +1,34 @@
+[
+  {
+    "id_produk": 1,
+    "nama_produk": "Plastik Kresek Hitam",
+    "id_kategori": 1,
+    "harga_jual": 15000,
+    "stok": 3,
+    "satuan": "Pcs"
+  },
+  {
+    "id_produk": 2,
+    "nama_produk": "Kardus Besar",
+    "id_kategori": 2,
+    "harga_jual": 25000,
+    "stok": 10,
+    "satuan": "Box"
+  },
+  {
+    "id_produk": 3,
+    "nama_produk": "Plastik Mika",
+    "id_kategori": 1,
+    "harga_jual": 5000,
+    "stok": 20,
+    "satuan": "Pcs"
+  },
+  {
+    "id_produk": 4,
+    "nama_produk": "Tali Rafia",
+    "id_kategori": 3,
+    "harga_jual": 7000,
+    "stok": 2,
+    "satuan": "Roll"
+  }
+]

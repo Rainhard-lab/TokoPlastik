@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+.login-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: #1e1e1e;
+    padding: 40px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.login-box p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+/* Pastikan input punya ukuran sama */
+input[type="text"], 
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2a2a2a;
+    color: #fff;
+    margin-bottom: 15px;
+    box-sizing: border-box; /* penting supaya ukuran konsisten */
+}
+
+/* Password field dengan icon mata */
+.password-field {
+    position: relative;
+    width: 100%; /* sama dengan input username */
+}
+
+.password-field input {
+    width: 100%; /* biar sama panjang dengan username */
+    padding-right: 40px; /* beri ruang untuk icon mata */
+    box-sizing: border-box;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Ingat Saya dan Lupa Password sejajar */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* ini yang bikin sejajar vertikal */
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* jarak kotak cek dengan teks */
+}
+
+.options a {
+    color: #ff8fa3;
+    text-decoration: none;
+}
+
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #ff8fa3;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: #ffb3c1;
+}
+
+.error {
+    background: #ff4d4d;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 12px;
+}

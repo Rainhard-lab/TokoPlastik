@@ -1,0 +1,6 @@
+[
+  { "id_detail": 5, "id_transaksi": 1, "id_produk": 1, "jumlah": 2, "harga": 20000, "subtotal": 40000 },
+  { "id_detail": 6, "id_transaksi": 1, "id_produk": 2, "jumlah": 1, "harga": 25000, "subtotal": 25000 },
+  { "id_detail": 8, "id_transaksi": 5, "id_produk": 3, "jumlah": 5, "harga": 20000, "subtotal": 40000 }
+
+]
